@@ -1,4 +1,4 @@
-const li = document.querySelectorAll('li');
+
 // istanza di vue
 const myApp = new Vue({
     el: '#app',
@@ -23,18 +23,17 @@ const myApp = new Vue({
             },
         ]
     },
+
     methods : {
-        // far decorare il testo
-        // decorationText(){
-        //     if (this.done === false) {
-        //         li.classList.add('');
-        //         console.log(li);
-        //     }
-        // },
+    
 
         arrayPush(){
+            const NewTask = {
+                text : this.newTodo,
+                done : false,
+            };
             if (this.newTodo !== "") {
-                this.text.push(this.newTodo)
+                this.todos.push(NewTask);
                 this.newTodo = "";
             }        
         },
