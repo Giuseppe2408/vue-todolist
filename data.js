@@ -25,8 +25,7 @@ const myApp = new Vue({
     },
 
     methods : {
-    
-
+        
         arrayPush(){
             const NewTask = {
                 text : this.newTodo,
